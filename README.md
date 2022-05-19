@@ -18,4 +18,4 @@
     $ npm start
 
     Monitorar e processar Stylus:
-    $ npm run gulp
+    $ npm run stylus

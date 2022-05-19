@@ -1,41 +1,16 @@
-.showcase
-    margin-bottom: 70px;
-
-    &__container
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
-
-    &__title
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 27px;
-        color: #000;
-        position: relative;
-        margin-bottom: 50px;
-
-        &:after
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 65px;
-            height: 5px;
-            background: #C0C0C0;
+.product
+    &:hover
+        .product
+            &__info
+                background: #E6E8EA;
+            &__buy
+                visibility: visible;
+                opacity: 1;
 
     &__item
-        max-width: 216px;
         display: block !important;
         margin: 0 auto;
         cursor: pointer;
-
-        &:hover
-            .showcase__info
-                background: #E6E8EA;
-
-            .showcase__buy
-                visibility: visible;
-                opacity: 1;
 
     &__info
         text-align: center;
@@ -65,12 +40,12 @@
         p
             font-size: 16px;
             font-weight: 900;
-            line-height: 22px;
+            line-height: 20px;
             color: #fff;
             position: absolute;
             z-index: 2;
-            top: 15px;
-            right: 10px;
+            top: 12px;
+            right: 8px;
 
         &:after
             content: '';
@@ -80,7 +55,7 @@
             width: 0;
             height: 0;
             border-top: 0px solid transparent;
-            border-bottom: 74px solid transparent;
+            border-bottom: 72px solid transparent;
             border-right: 82px solid #F8475F;
 
     &__name
@@ -132,46 +107,9 @@
         transition: all 0.2s ease-in-out;
         visibility: hidden;
         opacity: 0;
-
         @media (max-width: 991px)
             visibility: visible;
             opacity: 1;
 
         &:hover
             background: #f8475f;
-
-    .slick-next, .slick-prev
-        &:before
-            opacity: 1;
-            color: #000;
-            font-size: 30px;
-            transition: all 0.2s ease-in-out;
-
-        &:hover
-            &:before
-                color: #F8475F;
-
-    .slick-dots
-
-        li
-            width: 10px;
-            height: 10px;
-            margin: 0px 6px;
-            padding: 0;
-
-            &.slick-active
-                button
-                    &:before
-                        color: #F8475F;
-                        opacity: 1;
-
-        button
-            width: 10px;
-            height: 10px;
-
-            &:before
-                width: 10px;
-                height: 10px;
-                color: #BDBDBD;
-                font-size: 10px;
-                opacity: 1;

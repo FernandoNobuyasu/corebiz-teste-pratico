@@ -1,176 +1,87 @@
 .showcase
-    margin-bottom: 70px;
+    margin-bottom 70px
 
     &__container
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 15px;
+        margin 0 auto
+        max-width 1200px
+        @media (max-width 1200px)
+            padding 0 15px
 
     &__title
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 27px;
-        color: #000;
-        position: relative;
-        margin-bottom: 50px;
+        position relative
+        margin-bottom 50px
+        color #000
+        font-weight 900
+        font-size 20px
+        line-height 27px
 
         &:after
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 65px;
-            height: 5px;
-            background: #C0C0C0;
+            position absolute
+            bottom -8px
+            left 0
+            width 65px
+            height 5px
+            background #C0C0C0
+            content ''
 
-    &__item
-        max-width: 216px;
-        display: block !important;
-        margin: 0 auto;
-        cursor: pointer;
+    .slick
+        &-list
+            margin 0 -10px
+            @media (min-width 1300px)
+                margin 0 -50px
 
-        &:hover
-            .showcase__info
-                background: #E6E8EA;
+        &-slide>div
+            padding 0 10px
+            @media (min-width 1300px)
+                padding 0 50px
 
-            .showcase__buy
-                visibility: visible;
-                opacity: 1;
+        &-arrow
+            position absolute
+            top 50%
+            z-index 1
+            display flex
+            justify-content center
+            align-items center
+            width 22px
+            height 22px
+            transform translateY(-50%)
 
-    &__info
-        text-align: center;
-        padding-bottom: 15px;
-        transition: all 0.2s ease-in-out;
+            svg
+                transition all 0.2s ease-in-out
 
-        @media (max-width: 991px)
-            min-height: 175px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+            &:hover
+                svg
+                    fill #F8475F
 
-    &__figure
-        overflow: hidden;
-        position: relative;
+        &-next
+            right 0
 
-        img
-            width: 100%;
-            transition: all 0.2s ease-in-out;
+            @media (min-width 1300px)
+                right -44px
 
-    &__seal
-        position: absolute;
-        z-index: 1;
-        right: 0;
+        &-prev
+            left 0
 
-        p
-            font-size: 16px;
-            font-weight: 900;
-            line-height: 22px;
-            color: #fff;
-            position: absolute;
-            z-index: 2;
-            top: 15px;
-            right: 10px;
+            @media (min-width 1300px)
+                left -44px
 
-        &:after
-            content: '';
-            position: absolute;
-            z-index: 1;
-            right: 0;
-            width: 0;
-            height: 0;
-            border-top: 0px solid transparent;
-            border-bottom: 74px solid transparent;
-            border-right: 82px solid #F8475F;
+        &-dots
+            text-align center
+            li
+                display inline
+                margin 0 6px
+                padding 0
+                width 10px
+                height 10px
 
-    &__name
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 16px;
-        text-align: center;
-        color: #7A7A7A;
-        padding: 6px 0 0 0;
+                &.slick-active
+                    button
+                        background #F8475F
 
-    &__rating
-        text-align: center;
-
-    &__prices
-        min-height: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        margin-bottom: 8px;
-
-        &--promotion
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
-            text-align: center;
-            color: #7A7A7A;
-
-        &--regular
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 25px;
-            text-align: center;
-            color: #000000;
-
-        &--installments
-            font-weight: 400;
-            font-size: 11px;
-            line-height: 15px;
-            text-align: center;
-            color: #7A7A7A;
-
-    &__buy
-        font-family: 'Nunito', sans-serif;
-        width: 125px;
-        background: #000000;
-        border-radius: 5px;
-        height: 32px;
-        color: #fff;
-        transition: all 0.2s ease-in-out;
-        visibility: hidden;
-        opacity: 0;
-        @media (max-width: 991px)
-            visibility: visible;
-            opacity: 1;
-
-        &:hover
-            background: #f8475f;
-
-    .slick-next, .slick-prev
-        &:before
-            opacity: 1;
-            color: #000;
-            font-size: 30px;
-            transition: all 0.2s ease-in-out;
-
-        &:hover
-            &:before
-                color: #F8475F;
-
-    .slick-dots
-
-        li
-            width: 10px;
-            height: 10px;
-            margin: 0px 6px;
-            padding: 0;
-
-            &.slick-active
-                button
-                    &:before
-                        color: #F8475F;
-                        opacity: 1;
-
-        button
-            width: 10px;
-            height: 10px;
-
-            &:before
-                width: 10px;
-                height: 10px;
-                color: #BDBDBD;
-                font-size: 10px;
-                opacity: 1;
+            button
+                border-radius 50%
+                width 10px
+                height 10px
+                background #BDBDBD
+                font-size 0
+                transition all 0.2s ease-in-out

@@ -4,13 +4,13 @@ import Header from './components/Header/';
 import Newsletter from './components/Newsletter/';
 import Footer from './components/Footer/';
 import Showcase from './components/Showcase';
-import Banner from './components/Banner';
+import Fullbanner from './components/Fullbanner';
 
 export default function App() {
   return (
     <>
       <Header />
-      <Banner />
+      <Fullbanner />
       <Showcase name="Mais Vendidos" />
       <Newsletter />
       <Footer />

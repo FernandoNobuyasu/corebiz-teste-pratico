@@ -3,18 +3,17 @@ import Slider from "react-slick";
 
 // import './styles.css'
 
-export default function Banner() {
+export default function Fullbanner() {
     let fullbannerimg = '';
-    window.innerWidth > 910 ?
+    window.innerWidth > 991 ?
         fullbannerimg = '/assets/img/fullbanner.png' :
         fullbannerimg = '/assets/img/fullbannerMobile.png'
 
     const settings = {
         arrows: false,
-        dots: true,
         infinite: true,
         speed: 500,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -24,9 +23,6 @@ export default function Banner() {
         <div className="fullbanner">
             <ul className="fullbanner__list">
                 <Slider {...settings}>
-                    <li className="fullbanner__item">
-                        <img className="fullbanner__image" src={fullbannerimg} alt="Criar ou migrar seu e-commerce?" />
-                    </li>
                     <li className="fullbanner__item">
                         <img className="fullbanner__image" src={fullbannerimg} alt="Criar ou migrar seu e-commerce?" />
                     </li>

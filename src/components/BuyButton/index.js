@@ -4,15 +4,15 @@ const BuyButton = () => {
     // const [buyitems, setBuyItems] = React.useState(['']);
 
     function BuyProd() {
-        let qtdprods = localStorage.getItem('cartQnt') || 0;
-        qtdprods = parseInt(qtdprods) + 1;
-        document.getElementById('cart__qnt').innerHTML = qtdprods;
-        localStorage.setItem('cartQnt', qtdprods);
+        let cartQnt = localStorage.getItem('cartQnt') || 0;
+        cartQnt = parseInt(cartQnt) + 1;
+        document.getElementById('minicart__qnt').innerHTML = cartQnt;
+        localStorage.setItem('cartQnt', cartQnt);
     }
 
     return (
         <>
-            <button className="showcase__buy" onClick={BuyProd}>COMPRAR</button>
+            <button className="product__buy" onClick={BuyProd}>COMPRAR</button>
         </>
     );
 }
